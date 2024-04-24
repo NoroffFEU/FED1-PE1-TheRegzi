@@ -1,0 +1,67 @@
+section {
+    margin: 0 auto;
+    width: 85%; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+}
+
+label {
+    font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 1.4em;
+    padding: 0.5em 0;
+}
+
+input,
+textarea {
+    font-family: 'Source sans 3', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    border: 2px solid #77878B;
+    border-radius: 7px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.login-btn {
+    background-color: #336E7B;
+    color: #ffffff;
+    border-radius: 7px;
+    border: 0;
+    padding: 1em;
+    font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 1em 0;
+}
+
+.no-account {
+    font-family: 'Source sans 3', Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10em;
+}
+
+.no-account p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.register-here {
+    text-decoration: none;
+    color: #336E7B;
+    font-weight: 600;
+}
+
+@media (min-width: 500px) {
+    
+    section {
+        margin: 0 auto;
+        width: 400px; 
+    }
+
+}

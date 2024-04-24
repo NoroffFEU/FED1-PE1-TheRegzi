@@ -1,0 +1,144 @@
+:root {
+    --dark-blue: #336E7B;
+    --blue: #97B1B6;
+    --light-blue: #EEF2F3;
+    --white: #FFFFFF;
+    --black: #000000;
+    --beige: #CFB39A;
+    --red: #7B3333;
+    --grey: #77878B;
+    --main-heading: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    --second-heading: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
+    --body-text: 'Source sans 3', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.logo {
+    width: 70px;
+    padding: 0.5em 1.3em;
+}
+
+body {
+    background-color: var(--light-blue);
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+header,
+footer {
+    background-color: var(--dark-blue);
+    font-family: var(--main-heading);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 5.4em;
+}
+
+#createPostLink,
+#logoutLink {
+    display: none;
+}
+
+.hamburger-menu button {
+    font-size: 40px;
+    height: 100%;
+    color: var(--white);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+}
+
+.hamburger-menu a {
+    display: block;
+    padding: 0.6em;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    position: absolute;
+    background-color: var(--dark-blue);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    left: 0;
+    top: 80px;
+    width: 100%;
+    padding: 2em 0.8em;
+}
+
+footer {
+    padding: 4em 1.5em;
+}
+
+.footer-link {
+    color: var(--white);
+}
+
+footer p {
+    margin-top: 3em;
+}
+
+.heading {
+    font-family: var(--main-heading);
+    font-weight: 520;
+    font-size: 1.7em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 500px) {
+    .hamburger-menu button {
+        display: none;
+    }
+    
+    .hamburger-menu a {
+        display: block;
+        font-size: 1.2em;
+    }
+    
+    .hidden {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.2em 2em 0 0;
+        gap: 2.5em;
+    }
+    
+    .visible {
+        display: block;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        margin: 0;
+        padding: 6em;
+    }
+
+    footer p {
+        margin: 0;
+    }
+}
