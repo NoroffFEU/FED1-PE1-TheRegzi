@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotView Labs | Login</title>
+    <link rel="icon" href="/favicon/favicon.ico">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script defer type="module" src="/js/index.mjs"></script>
+    <script defer type="module" src="/js/login.mjs"></script>
+    <script src="https://kit.fontawesome.com/878e5c0278.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="/index.html"><img src="/images/logo-2.png" alt="HotView Labs logo" class="logo"></a>
+        </div>
+        <nav>
+            <div class="hamburger-menu">
+                <button id="hamburger-button"><i class="fa-solid fa-bars"></i></button>
+                <div id="hamburger-content" class="hidden">
+                    <a href="/index.html">Home</a>
+                    <a id="createPostLink" href="/html/post/create-post.html">Create Post</a>
+                    <a id="loginLink" href="/html/account/login.html">Login</a>
+                    <a id="registerLink" href="/html/account/register.html">Register</a>
+                    <a href="#" id="logoutLink">Log out</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1 class="heading">Login</h1>
+            <form id="loginForm" method="POST">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter E-mail" autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter Password" autocomplete="current-password">
+                </div>
+                <button class="login-btn" type="submit">Login</button>
+            </form>
+            <div class="no-account">
+                <p>Do not have an account? <a class="register-here" href="/html/account/register.html">Register here!</a></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <a id="loginLink" class="footer-link" href="/html/account/login.html">Login</a><br>
+            <a id="registerLink" class="footer-link" href="/html/account/register.html">Register</a><br>
+            <a id="logoutLink" class="footer-link" href="#">Log Out</a>
+        </div>
+        <div>
+            <p>&copy; 2024 HotView Labs, Inc.<br>All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
