@@ -22,13 +22,13 @@ async function registerUser(formData) {
         });
 
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}, ${errorResponse.message}`);
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
         console.log('Success:', data);
         alert('Registration successful!');
-        window.location.href = '/html/account/login.html'; 
+        window.location.href = '/account/login.html'; 
     } catch (error) {
         console.error('Error:', error);
         alert('Failed to register: ' + error.message); 
