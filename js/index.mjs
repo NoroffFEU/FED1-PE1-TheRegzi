@@ -11,12 +11,12 @@ document.getElementById('hamburger-button').addEventListener('click', function()
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const createPostLink = document.getElementById('createPostLink');
-    const loginLink = document.getElementById('loginLink');
-    const registerLink = document.getElementById('registerLink');
-    const logoutLink = document.getElementById('logoutLink');
-    const userToken = localStorage.getItem('data.accessToken');
-    console.log('Usertoken:', userToken);
+    const createPostLink = document.querySelector('.createPostLink');
+    const loginLink = document.querySelector('.loginLink');
+    const registerLink = document.querySelector('.registerLink');
+    const logoutLink = document.querySelector('.logoutLink');
+    const userToken = localStorage.getItem('userToken');
+    
 
     if (userToken) {
         createPostLink.style.display = 'block';

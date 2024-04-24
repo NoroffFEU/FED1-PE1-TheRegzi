@@ -25,9 +25,13 @@ export async function loginUser(formData) {
 
         const data = await response.json();
         console.log('Success:', data);
+        const userToken = data.data.accessToken;
 
-        if (data.accessToken) {
-            localStorage.setItem('userToken', data.accessToken)
+        if (userToken) {
+            localStorage.setItem('userToken', userToken);
+            console.log('User Token:', userToken); 
+        } else {
+            console.log('User Token not found in response:', data); 
         }
         
         alert('Login successful!');
