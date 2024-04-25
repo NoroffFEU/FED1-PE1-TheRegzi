@@ -1,12 +1,16 @@
-async function createPost(formData) {
 
+async function createPost(formData) {
     const name = localStorage.getItem('name');
+    const userToken = localStorage.getItem('userToken');
+    const apiUrl = `https://v2.api.noroff.dev/blog/posts/${name}`;
 
     try {
-        const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${name}`, {
+        const response = await fetch(apiUrl, {
+
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${userToken}`,
             },
             body: JSON.stringify({
                 title: formData.get('title'),
@@ -18,7 +22,7 @@ async function createPost(formData) {
                 },
             })
         });
-
+        
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -38,3 +42,4 @@ document.getElementById('blogPostForm').addEventListener('submit', function(even
     const formData = new FormData(this);
     createPost(formData);
 });
+
