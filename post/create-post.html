@@ -37,20 +37,28 @@
         <section>
             <form id="blogPostForm" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="title">Blog Title</label>
-                    <input type="text" name="title" id="title" placeholder="Enter Blog Title">
+                    <label for="title">Blog Title <span class="required">*</span></label>
+                    <input type="text" name="title" id="title" placeholder="Enter Blog Title" required>
                 </div>
                 <div class="form-group">
-                    <label for="author">Author</label>
-                    <input type="text" name="author" id="author" placeholder="Enter Author">
+                    <label for="author">Author <span class="required">*</span></label>
+                    <input type="text" name="author" id="author" placeholder="Enter Author" required>
                 </div>
                 <div class="form-group">
-                    <label for="blog-text">Blog Text</label>
-                    <textarea name="blog-text" id="blog-text" placeholder="Enter Blog Text" rows="20"></textarea>
+                    <label for="publication-date">Publication Date <span class="required">*</span></label>
+                    <input type="date" id="publication-date" name="publication-date" required>
                 </div>
                 <div class="form-group">
-                    <label for="banner-image-url">Banner Image URL</label>
-                    <input type="url" id="banner-image-url" name="banner-image-url" placeholder="Enter Banner Image URL">
+                    <label for="tags">Tags (separated by commas)</label>
+                    <input type="text" id="tags" name="tags" placeholder="Enter Tags">
+                </div>
+                <div class="form-group">
+                    <label for="blog-text">Blog Text <span class="required">*</span></label>
+                    <textarea name="blog-text" id="blog-text" placeholder="Enter Blog Text" rows="20" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="banner-image-url">Banner Image URL <span class="required">*</span></label>
+                    <input type="url" id="banner-image-url" name="banner-image-url" placeholder="Enter Banner Image URL" required>
                 </div>
                 <button type="submit">Create Post</button>
             </form>

@@ -7,8 +7,14 @@ async function createPost(formData) {
             },
             body: JSON.stringify({
                 title: formData.get('title'),
-                author: formData.get('author'),
-                textarea: formData.get('blog-text')
+                body: formData.get('blog-text'), 
+                author: formData.get('author'), 
+                tags: [], 
+                media: {
+                    url: formData.get('banner-image-url'),
+                    alt: 'Banner Image'
+                },
+                created: formData.get('publication-date')
             })
         });
 
