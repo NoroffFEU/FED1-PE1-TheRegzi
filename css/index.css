@@ -1,3 +1,78 @@
 .all-posts {
     background-color: var(--blue);
+    padding: 1.5em;
+}
+
+#posts-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 20px;                 
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #77878B;
+    border-radius: 25px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.post-heading {
+    font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    width: 70%;
+    margin-left: 0.3em;
+}
+
+.post-heading a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.post-img {
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: row;
+    margin: 1em 1em 0em;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.read-more {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #CFB39A;
+    padding: 0.5em;
+    width: 8em;
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+    margin: 0em 1.5em 1em;
+}
+
+.fa-solid.fa-right-long {
+    font-size: 1.5em;
+}
+
+@media (min-width: 600px) {
+    
 }

@@ -108,7 +108,7 @@ footer p {
     flex-direction: column;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 540px) {
     .hamburger-menu button {
         display: none;
     }

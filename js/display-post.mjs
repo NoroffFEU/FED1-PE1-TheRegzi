@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (posts && posts.length > 0) {
             displayPosts(posts);
         } else {
-            console.log('Error fetching posts');
+            console.log('No posts to display');
         }
     } catch (error) {
         console.error('Error loading posts:', error);
@@ -21,8 +21,17 @@ function displayPosts(posts) {
         const postElement = document.createElement('div');
         postElement.className = 'post';
         postElement.innerHTML = `
-            <h2>${post.title}</h2>
-            <img src="${imageUrl}" alt="Banner image for ${post.title}">
+            <div class='first-section'>
+                <div class='post-heading'>
+                    <a href='#'>${post.title}</a>
+                </div>
+                <div class='post-img'>
+                    <img class='img' src="${post.media.url}" alt="Banner image for ${post.title}">
+                </div>
+            </div>
+            <div class='second-section'>
+                <a class='read-more' href='#'>Read more <i class="fa-solid fa-right-long"></i><a>
+            </div>
         `;
         postsContainer.appendChild(postElement);
     });
