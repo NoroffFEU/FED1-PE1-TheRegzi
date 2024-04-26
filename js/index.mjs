@@ -1,6 +1,7 @@
 
 import { logoutUser } from "./logout.mjs";
 
+
 document.getElementById('hamburger-button').addEventListener('click', function() {
     var content = document.getElementById('hamburger-content');
     if (content.classList.contains('hidden')) {
@@ -33,4 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
 logoutUser();
+

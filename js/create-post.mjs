@@ -1,6 +1,7 @@
 
 async function createPost(formData) {
     const name = localStorage.getItem('name');
+    console.log('User name:', name); 
     const userToken = localStorage.getItem('userToken');
     const apiUrl = `https://v2.api.noroff.dev/blog/posts/${name}`;
 
