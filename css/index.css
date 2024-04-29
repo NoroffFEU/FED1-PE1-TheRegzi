@@ -21,10 +21,10 @@
 
 .post-heading {
     font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.1em;
     font-weight: 600;
     width: 70%;
-    margin-left: 0.3em;
+    margin: 0.3em;
 }
 
 .post-heading a {
@@ -65,7 +65,7 @@
     font-weight: 600;
     text-decoration: none;
     color: #000000;
-    margin: 0em 1.5em 1em;
+    margin: 0em 1.4em 1em;
 }
 
 .fa-solid.fa-right-long {

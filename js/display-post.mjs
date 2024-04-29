@@ -30,7 +30,7 @@ function displayPosts(posts) {
                 </div>
             </div>
             <div class='second-section'>
-                <a class='read-more' href='#'>Read more <i class="fa-solid fa-right-long"></i><a>
+                <a class='read-more' href='/post/index.html?id=${post.id}'>Read more <i class="fa-solid fa-right-long"></i><a>
             </div>
         `;
         postsContainer.appendChild(postElement);
