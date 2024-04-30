@@ -47,7 +47,6 @@ document.getElementById('blogPostForm').addEventListener('submit', function(even
 });
 
 async function fetchPostById(postId) {
-    console.log(apiUrl);
     try {
         const response = await fetch(apiUrl, {
             method: 'GET',

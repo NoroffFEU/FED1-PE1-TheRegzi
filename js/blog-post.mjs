@@ -1,4 +1,7 @@
 
+    const queryParams = new URLSearchParams(window.location.search);
+    const postId = queryParams.get("id");
+
 async function fetchPostById(postId) {
     const name = localStorage.getItem('name');
     const apiUrl = `https://v2.api.noroff.dev/blog/posts/${name}/${postId}`;
@@ -27,8 +30,6 @@ async function fetchPostById(postId) {
 
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const queryParams = new URLSearchParams(window.location.search);
-        const postId = queryParams.get("id");
         const post = await fetchPostById(postId);
         if (post) {
             displayBlogPost(post);
@@ -59,7 +60,7 @@ function displayBlogPost(post) {
 
     const editPostButton = document.getElementById("edit-post");
     editPostButton.addEventListener("click", () => {
-        window.location.href = `/post/edit.html?id=${post.id}`; 
+        window.location.href = `/post/edit.html?id=${postId}`; 
 
     });
 }
