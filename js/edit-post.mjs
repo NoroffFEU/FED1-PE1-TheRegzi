@@ -32,11 +32,11 @@ async function editPost(formData) {
 
         const data = await response.json();
         console.log('Success:', data);
-        alert('Blog post is created successfully!');
+        alert('Blog post is updated successfully!');
         window.location.href = '/index.html'; 
     } catch (error) {
         console.error('Error:', error);
-        alert('Failed to create blog post: ' + error.message); 
+        alert('Failed to update blog post: ' + error.message); 
     }
 }
 
@@ -61,6 +61,7 @@ async function fetchPostById(postId) {
         }
         
         const post = await response.json();
+        console.log(post);
         return post;
     } catch (error) {
         console.error('Failed to fetch the post:', error);
@@ -68,25 +69,38 @@ async function fetchPostById(postId) {
     }
 }
 
-// document.addEventListener("DOMContentLoaded", async () => {
-//     try {
-//         const queryParams = new URLSearchParams(window.location.search);
-//         const postId = queryParams.get("id");
-//         const post = await fetchPostById(postId);
-//         if (post) {
-//             displayBlogPost(post);
-//         } else {
-//             console.error("Blog post not found");
-//         }
-//     } catch (error) {
-//         console.error("An error occurred:", error);
-//     } 
-// });
+function populateForm(post) {
+    if (!post) {
+        console.error('No post data to populate the form.');
+        return;
+    }
 
-
-
-function populateForm() {
-
+    document.getElementById('title').value = post.data.title || '';
+    document.getElementById('tags').value = post.data.tags ? post.data.tags.join(', ') : '';
+    document.getElementById('blog-text').value = post.data.body || '';
+    document.getElementById('banner-image-url').value = post.data.media.url || '';
 }
 
-fetchPostById(postId);
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        const post = await fetchPostById(postId);
+        if (post) {
+            populateForm(post);
+        } else {
+            console.error("Blog post not found");
+        }
+    } catch (error) {
+        console.error("An error occurred:", error);
+    } 
+});
+
+function deleteBlogPost() {
+    document.getElementById('delete').addEventListener()
+}
+
+
+
+
+
+
+
