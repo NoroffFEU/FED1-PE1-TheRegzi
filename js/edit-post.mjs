@@ -46,25 +46,48 @@ document.getElementById('blogPostForm').addEventListener('submit', function(even
     editPost(formData);
 });
 
-async function fetchPostContent(postId) {
+async function fetchPostById(postId) {
+    console.log(apiUrl);
     try {
         const response = await fetch(apiUrl, {
-
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json',
                 'Authorization': `Bearer ${userToken}`,
-            },
+                'Content-Type': 'application/json'
+            }
         });
-        const data = await response.json();
-            console.log(data);
-    } catch {
-        console.log('Error:', error);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        
+        const post = await response.json();
+        return post;
+    } catch (error) {
+        console.error('Failed to fetch the post:', error);
+        return null;
     }
 }
+
+// document.addEventListener("DOMContentLoaded", async () => {
+//     try {
+//         const queryParams = new URLSearchParams(window.location.search);
+//         const postId = queryParams.get("id");
+//         const post = await fetchPostById(postId);
+//         if (post) {
+//             displayBlogPost(post);
+//         } else {
+//             console.error("Blog post not found");
+//         }
+//     } catch (error) {
+//         console.error("An error occurred:", error);
+//     } 
+// });
+
+
 
 function populateForm() {
 
 }
 
-fetchPostContent();
+fetchPostById(postId);
