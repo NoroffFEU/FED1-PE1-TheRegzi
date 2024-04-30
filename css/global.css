@@ -44,10 +44,11 @@ header {
     height: 5.4em;
 }
 
-#createPostLink,
-#logoutLink {
+.createPostLink,
+.logoutLink {
     display: none;
 }
+
 
 .hamburger-menu button {
     font-size: 40px;

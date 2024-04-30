@@ -23,7 +23,7 @@ function displayPosts(posts) {
         postElement.innerHTML = `
             <div class='first-section'>
                 <div class='post-heading'>
-                    <a href='#'>${post.title}</a>
+                    <a href='/post/index.html?id=${post.id}'>${post.title}</a>
                 </div>
                 <div class='post-img'>
                     <img class='img' src="${post.media.url}" alt="Banner image for ${post.title}">

@@ -42,18 +42,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function displayBlogPost(post) {
 
-    console.log(post);
-
     const postImage = document.getElementById("post-image");
     postImage.innerHTML = `<img src="${post.data.media.url}" alt="${post.data.title}" class="blog-post-img">`;
 
     const postTitle = document.getElementById("post-heading");
     postTitle.textContent = post.data.title;
-    
 
     const author = document.getElementById("author");
     author.textContent = `Written by `+ post.data.author.name;
-    
 
     const published = document.getElementById("published");
     published.textContent = formatPublishedDate(post.data.created);
@@ -81,3 +77,14 @@ function formatPublishedDate(dateString) {
     });
     return `Published on ${formattedDate} at ${formattedTime}`;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const userToken = localStorage.getItem('userToken');
+    const editPost = document.querySelector('#edit-post');
+
+    if (userToken) {
+        editPost.style.display = 'block';
+    } else {
+        editPost.style.display = 'none';
+    }
+});

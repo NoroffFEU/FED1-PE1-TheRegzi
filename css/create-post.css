@@ -13,6 +13,10 @@ form {
     width: 90%;
 }
 
+.required {
+    color: red;
+}
+
 label {
     font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
@@ -41,7 +45,11 @@ button {
     font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
     font-weight: 500;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
+}
+
+#delete {
+    background-color: #7B3333;
 }
 
 @media (min-width: 600px) {
