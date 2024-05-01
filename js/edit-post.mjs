@@ -81,22 +81,63 @@ function populateForm(post) {
     document.getElementById('banner-image-url').value = post.data.media.url || '';
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-    try {
-        const post = await fetchPostById(postId);
-        if (post) {
-            populateForm(post);
-        } else {
-            console.error("Blog post not found");
-        }
-    } catch (error) {
-        console.error("An error occurred:", error);
-    } 
-});
 
-function deleteBlogPost() {
-    document.getElementById('delete').addEventListener()
+async function deleteBlogPost(name, postId) {
+    const userToken = localStorage.getItem('userToken'); 
+    const apiUrl = `https://v2.api.noroff.dev/blog/posts/${name}/${postId}`;
+    try {
+        const response = await fetch(apiUrl, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${userToken}`,
+            },
+        });
+        
+        if (response.status === 204) {
+            alert('Blog post deleted successfully.');
+            window.location.href = `/index.html`;
+            return;
+        } else {
+            throw new Error('Failed to delete blog post.');
+        }
+
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error deleting blog post: ' + error.message); 
+    }
 }
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const postId = queryParams.get("id");
+    const name = localStorage.getItem('name');
+
+    if (postId) {
+        try {
+            const post = await fetchPostById(postId, name);
+            if (post) {
+                populateForm(post);
+            } else {
+                console.error("Blog post not found");
+                window.location.href = '/index.html';
+                return;
+            }
+        } catch (error) {
+            console.error("An error occurred while fetching the post:", error);
+            window.location.href = '/index.html';
+            return;
+        } 
+    }
+
+    document.getElementById('delete').addEventListener('click', function() {
+        const confirmed = confirm('Are you sure you want to delete this post?');
+        if (confirmed) {
+            deleteBlogPost(name, postId);
+        }
+    });
+
+});
+    
 
 
 
