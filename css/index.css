@@ -74,6 +74,70 @@
     font-size: 1.5em;
 }
 
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    margin: 1em auto;
+    overflow: hidden;
+}
+
+.carousel-slides .carousel-item {
+    display: none; 
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    padding: 10px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.carousel-control.prev {
+    left: 0;
+}
+
+.carousel-control.next {
+    right: 0;
+}
+
+.read-more-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #CFB39A;
+    padding: 0.5em;
+    width: 8em;
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+    margin: 0em 1.4em 1em;
+}
+
 @media (min-width: 600px) {    
     .post {
         width: 550px;

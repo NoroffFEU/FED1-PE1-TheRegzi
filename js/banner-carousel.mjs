@@ -1,0 +1,54 @@
+var slideIndex = 1;
+const name = localStorage.getItem('name');
+
+async function fetchPosts() {
+    try {
+        const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${name}`); 
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        
+        const postsObject = await response.json();
+        const postsArray = Object.values(postsObject);
+        console.log(postsArray);
+        
+        populateCarousel(postsArray);
+        showSlides(slideIndex);
+    } catch (error) {
+        console.error('Failed to fetch posts:', error);
+    }
+}
+
+function populateCarousel(postsArray) {
+    const container = document.querySelector('.carousel-slides');
+    container.innerHTML = ''; 
+    postsArray.forEach(post => {
+            const item = document.createElement('div');
+            item.className = 'carousel-item';
+            item.innerHTML = `
+                <img src="${}" alt="${post.title}">
+                <div class="carousel-caption">
+                    <h2>${post.title}</h2>
+                    <p>${post.body}</p>
+                    <a href="#" class="read-more-carousel">Read More <i class="fa-solid fa-right-long"></i></a>
+                </div>
+            `;
+            container.appendChild(item);
+        });
+    }
+
+function moveSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    var slides = document.getElementsByClassName("carousel-item");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+}
+
+document.addEventListener('DOMContentLoaded', fetchPosts);
