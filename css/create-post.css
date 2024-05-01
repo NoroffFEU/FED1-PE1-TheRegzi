@@ -2,7 +2,7 @@ section {
     background-color: #ffffff;
     width: 95%;
     margin: 0 auto 2em;
-    padding-top: 1em;
+    padding: 1em 0 2em 0;
 }
 
 form {
@@ -50,14 +50,23 @@ button {
 
 #delete {
     background-color: #7B3333;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     section {
-        width: 600px;
+        width: 700px;
     }
 
     form {
-        width: 500px;
+        width: 600px;
+    }
+
+    #delete {
+        width: 600px;
     }
 }
