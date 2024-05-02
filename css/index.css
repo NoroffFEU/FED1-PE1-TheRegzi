@@ -80,6 +80,14 @@
     max-width: 500px;
     height: 500px;
     margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.carousel-item {
+    overflow: hidden;
+    gap: 0;
 }
 
 .carousel-slides .carousel-item {
@@ -90,7 +98,7 @@
 
 .carousel-item img {
     width: 100%;
-    height: 280px;
+    height: 270px;
     object-fit: cover;
 }
 
@@ -120,22 +128,42 @@
 
 .carousel-control {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 5em;
+    top: 50px; 
+    bottom: 70px; 
+    width: 30px;
+    font-size: 4em;
     color: #000000;
     text-decoration: none;
-    padding: 16px;
     background: #6F898E;
     cursor: pointer;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
 }
 
+
 .carousel-control.prev {
-    left: 0;
+    left: -30px;
+    
 }
 
 .carousel-control.next {
-    right: 0;
+    right: -30px;
+}
+
+.i.fa-solid.fa-chevron-left::before {
+    display: flex;
+    margin: 0em;
+    bottom: 1em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.left-arrow {
+    align-items: center;
+
 }
 
 .read-more-carousel {
