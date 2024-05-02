@@ -10,9 +10,10 @@ async function fetchPosts() {
         
         const postsObject = await response.json();
         const postsArray = Object.values(postsObject);
+        const postArray = postsArray[0];
         console.log(postsArray);
         
-        populateCarousel(postsArray);
+        populateCarousel(postArray);
         showSlides(slideIndex);
     } catch (error) {
         console.error('Failed to fetch posts:', error);
@@ -26,7 +27,7 @@ function populateCarousel(postsArray) {
             const item = document.createElement('div');
             item.className = 'carousel-item';
             item.innerHTML = `
-                <img src="${}" alt="${post.title}">
+                <img src="${post.media.url}" alt="${post.title}">
                 <div class="carousel-caption">
                     <h2>${post.title}</h2>
                     <p>${post.body}</p>
@@ -36,6 +37,7 @@ function populateCarousel(postsArray) {
             container.appendChild(item);
         });
     }
+
 
 function moveSlide(n) {
     showSlides(slideIndex += n);
