@@ -45,12 +45,21 @@ function moveSlide(n) {
 
 function showSlides(n) {
     var slides = document.getElementsByClassName("carousel-item");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (var i = 0; i < slides.length; i++) {
+
+    if (n > 3) {slideIndex = 1}
+    if (n < 1) {slideIndex = 3}
+    for (var i = 0; i <= 2; i++) {
         slides[i].style.display = "none";
     }
     slides[slideIndex-1].style.display = "block";
 }
 
 document.addEventListener('DOMContentLoaded', fetchPosts);
+
+document.querySelector('.prev').addEventListener('click', function() {
+    moveSlide(-1);
+});
+
+document.querySelector('.next').addEventListener('click', function() {
+    moveSlide(1);
+});
