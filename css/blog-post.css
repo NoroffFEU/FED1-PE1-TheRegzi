@@ -5,7 +5,7 @@
     width: 85%;
     display: flex;
     flex-direction: column;
-    padding: 1em;
+    padding: 2em 1.5em;
 }
 
 .blog-post-img {
@@ -38,6 +38,7 @@
     font-family: 'Source sans 3', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
     font-weight: 400;
+    white-space: pre-wrap;
 }
 
 #edit-post {

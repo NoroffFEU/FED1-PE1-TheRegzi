@@ -13,6 +13,8 @@ document.getElementById('hamburger-button').addEventListener('click', function()
     }
 });
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const createPostLink = document.querySelector('.createPostLink');
     const loginLink = document.querySelector('.loginLink');
