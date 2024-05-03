@@ -80,6 +80,7 @@ header {
     top: 80px;
     width: 100%;
     padding: 2em 0.8em;
+    z-index: 100;
 }
 
 footer {

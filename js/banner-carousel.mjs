@@ -31,7 +31,7 @@ function populateCarousel(postsArray) {
                 <div class="carousel-caption">
                     <h2>${post.title}</h2>
                     <p>${post.body}</p>
-                    <a href="#" class="read-more-carousel">Read More <i class="fa-solid fa-right-long"></i></a>
+                    <a href='/post/index.html?id=${post.id}' class="read-more-carousel">Read More <i class="fa-solid fa-right-long"></i></a>
                 </div>
             `;
             container.appendChild(item);

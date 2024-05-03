@@ -100,6 +100,7 @@
     width: 100%;
     height: 270px;
     object-fit: cover;
+    object-position: center 55%;
 }
 
 .carousel-caption {
@@ -116,6 +117,7 @@
     margin: 0 auto;
     padding: 0em 2em;
     text-align: left;
+    margin-top: -3px;
 }
 
 .carousel-caption p {
@@ -124,6 +126,8 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     margin: 0;
+    font-family: 'Source sans 3', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
 }
 
 .carousel-control {
@@ -151,21 +155,6 @@
     right: -30px;
 }
 
-.i.fa-solid.fa-chevron-left::before {
-    display: flex;
-    margin: 0em;
-    bottom: 1em;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.left-arrow {
-    align-items: center;
-
-}
-
 .read-more-carousel {
     display: flex;
     flex-direction: row;
@@ -176,6 +165,7 @@
     width: 8em;
     font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
+    font-size: 1.2em;
     text-decoration: none;
     color: #000000;
     margin: 1em 0em;
@@ -191,6 +181,11 @@
         height: 130px;
         border-radius: 16px;
     }    
+
+    .carousel-caption p {
+        font-size: 1.3em;
+    }
+
 }
 
 @media (min-width: 800px) {
@@ -205,11 +200,48 @@
     .all-posts {
         padding: 3em;
     }
+
+    
+    
+    
+    .carousel-item img {
+        height: 300px;
+        bottom: 100px;
+    }
+    
+    
+    
 }
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
     .desktop-white-color {
         width: 75%;
     }
 
+    .carousel-control {
+        position: absolute;
+        top: 100px; 
+        bottom: 190px; 
+        width: 230px;
+        font-size: 7em;
+        color: #000000;
+        text-decoration: none;
+        background: #6F898E;
+        cursor: pointer;
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+    }
+
+    .carousel-control.prev {
+        left: -230px;
+    }
+
+    .carousel-control.next {
+        right: -230px;
+    }
+
+    .carousel {
+        height: 550px;
+    }
 }
