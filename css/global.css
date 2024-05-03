@@ -135,7 +135,6 @@ footer p {
         justify-content: center;
         align-items: center;
         width: 100%;  
-        background-color: transparent; 
         box-shadow: none;  
         position: static;  
         padding: 1.2em 0;  
@@ -145,7 +144,7 @@ footer p {
 
     #hamburger-content a {
         display: block;
-        
+        padding-right: 2em;
     }
     
     .hidden {

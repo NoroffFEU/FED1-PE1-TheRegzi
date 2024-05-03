@@ -18,7 +18,6 @@ export async function fetchPosts() {
         }
 
         const posts = await response.json();
-        console.log('Retrieved posts:', posts);
         return posts.data;
     } catch (error) {
         console.error('Failed to fetch posts:', error);

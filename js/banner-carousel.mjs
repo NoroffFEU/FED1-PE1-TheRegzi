@@ -11,7 +11,6 @@ async function fetchPosts() {
         const postsObject = await response.json();
         const postsArray = Object.values(postsObject);
         const postArray = postsArray[0];
-        console.log(postsArray);
         
         populateCarousel(postArray);
         showSlides(slideIndex);
