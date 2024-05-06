@@ -1,0 +1,22 @@
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+label {
+    font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+input {
+    border: 2px solid #77878B;
+    padding: 1em;
+    font-family: 'Source sans 3', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
