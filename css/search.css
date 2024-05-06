@@ -21,3 +21,8 @@ input {
     box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
+@media (min-width: 700px) {
+    form {
+        width: 660px;
+    }
+}
