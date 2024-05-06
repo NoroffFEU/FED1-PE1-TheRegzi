@@ -3,6 +3,7 @@ export function logoutUser() {
 
     logoutLink.addEventListener('click', () => {
         localStorage.removeItem('userToken');
+        localStorage.removeItem('name');
         window.location.href = '/account/login.html'; 
     })
 }
