@@ -1,5 +1,7 @@
 var slideIndex = 1;
-const name = localStorage.getItem('name');
+const defaultName = 'Regine';
+const name = localStorage.getItem('name') || defaultName;
+
 
 async function fetchPosts() {
     try {

@@ -3,7 +3,9 @@
     const postId = queryParams.get("id");
 
 async function fetchPostById(postId) {
-    const name = localStorage.getItem('name');
+    
+    const defaultName = 'Regine';
+    const name = localStorage.getItem('name') || defaultName;
     const apiUrl = `https://v2.api.noroff.dev/blog/posts/${name}/${postId}`;
     const userToken = localStorage.getItem('userToken');
 

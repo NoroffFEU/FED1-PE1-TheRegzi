@@ -1,7 +1,7 @@
 
 
 export async function fetchPosts() {
-    const defaultName = 'public';
+    const defaultName = 'Regine';
     const name = localStorage.getItem('name') || defaultName;
     const apiUrl = `https://v2.api.noroff.dev/blog/posts/${name}`;
     const userToken = localStorage.getItem('userToken'); 
