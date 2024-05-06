@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (posts && posts.length > 0) {
             displayPosts(posts);
         } else {
-            console.log('No posts to display');
+            console.log('No posts available to display.');
         }
     } catch (error) {
         console.error('Error loading posts:', error);

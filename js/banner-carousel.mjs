@@ -9,7 +9,6 @@ async function fetchPosts() {
         }
         
         const postsObject = await response.json();
-        console.log(postsObject);
         const postsArray = Object.values(postsObject);
         const postArray = postsArray[0];
         
