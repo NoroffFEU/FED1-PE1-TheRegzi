@@ -1,17 +1,22 @@
 
 
 export async function fetchPosts() {
-    const name = localStorage.getItem('name');
+    const defaultName = 'public';
+    const name = localStorage.getItem('name') || defaultName;
     const apiUrl = `https://v2.api.noroff.dev/blog/posts/${name}`;
     const userToken = localStorage.getItem('userToken'); 
 
     try {
+        const headers = userToken ? {
+            'Authorization': `Bearer ${userToken}`,
+            'Content-Type': 'application/json'
+        } : {
+            'Content-Type': 'application/json'
+        };
+
         const response = await fetch(apiUrl, {
             method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${userToken}`,
-                'Content-Type': 'application/json'
-            }
+            headers: headers
         });
 
         if (!response.ok) {

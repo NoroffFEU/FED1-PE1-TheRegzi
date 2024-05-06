@@ -46,6 +46,11 @@ function moveSlide(n) {
 function showSlides(n) {
     var slides = document.getElementsByClassName("carousel-item");
 
+    if (slides.length === 0) {
+        console.log('No slides to show.');
+        return;
+    }
+
     if (n > 3) {slideIndex = 1}
     if (n < 1) {slideIndex = 3}
     for (var i = 0; i <= 2; i++) {
