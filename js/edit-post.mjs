@@ -8,6 +8,8 @@
 async function editPost(formData) {
     
     try {
+        const tagsInput = formData.get('tags');
+        const tags = tagsInput ? tagsInput.split(',').map(tag => tag.trim()) : [];
         const response = await fetch(apiUrl, {
 
             method: 'PUT',
@@ -18,7 +20,7 @@ async function editPost(formData) {
             body: JSON.stringify({
                 title: formData.get('title'),
                 body: formData.get('blog-text'),  
-                tags: [], 
+                tags: tags, 
                 media: {
                     url: formData.get('banner-image-url'),
                     alt: 'Banner Image'

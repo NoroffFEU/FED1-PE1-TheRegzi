@@ -1,3 +1,8 @@
+section {
+    display: flex;
+    flex-direction: column;
+}
+
 form {
     display: grid;
     grid-template-columns: 1fr;
@@ -8,8 +13,8 @@ form {
 
 label {
     font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.1em;
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: 650;
     margin-bottom: 0.5em;
 }
 
@@ -19,6 +24,14 @@ input {
     font-family: 'Source sans 3', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.1em;
     box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+h2 {
+    font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+    font-size: 1.1em;
+    font-weight: 600;
+    
 }
 
 @media (min-width: 700px) {

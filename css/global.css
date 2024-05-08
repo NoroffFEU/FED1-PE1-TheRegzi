@@ -124,6 +124,7 @@ footer p {
 }
 
 @media (min-width: 700px) {
+
     
     .hamburger-menu button {
         display: none;
@@ -183,3 +184,9 @@ footer p {
         font-size: 2.2em;
     }
 }
+
+@media (min-width: 950px) {
+
+    .logo {
+        padding-left: 2.5em;
+    }
