@@ -2,14 +2,15 @@ section {
     display: flex;
     flex-direction: column;
     margin-bottom: 2em;
+    width: 90%;
+    margin: 0 auto;
 }
 
 form {
     display: grid;
     grid-template-columns: 1fr;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    align-items: center;
 }
 
 label {
@@ -29,8 +30,6 @@ input {
 
 h2 {
     font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
-    margin: 1em auto;
-    margin-left: 1.6em;
     font-size: 1em;
     font-weight: 600;
     
@@ -41,8 +40,7 @@ h2 {
     color: #000000;
     font-size: 1.5em;
     font-weight: 500;
-    margin: 0em 0em 1em 1.1em;
-    
+    margin: 0em 0em 1em 0em;
 }
 
 ul {
@@ -60,7 +58,7 @@ ul {
     border: 2px solid #77878B;
     border-radius: 25px;
     background-color: #ffffff;
-    width: 83%;
+    width: 90%;
     padding: 1em;
     margin: 0.5em 0em;
 }
@@ -91,7 +89,7 @@ ul {
 
     section {
         width: 660px;
-        margin: 0 auto;
+        margin: 2.5em auto;
     }
     form {
         width: 660px;
@@ -99,5 +97,18 @@ ul {
 
     .post {
         width: 94%;
+    }
+
+    h2 {
+        margin: 1em auto;
+        margin-left: 0em;
+        font-size: 1.3em;
+    }
+    
+    #search-info {
+        color: #000000;
+        font-size: 1.7em;
+        font-weight: 500;
+        margin: 0em 0em 1em 0em;
     }
 }
