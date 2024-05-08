@@ -1,6 +1,7 @@
 section {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2em;
 }
 
 form {
@@ -29,7 +30,7 @@ input {
 h2 {
     font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
     margin: 1em auto;
-    margin-left: 1.7em;
+    margin-left: 1.6em;
     font-size: 1em;
     font-weight: 600;
     
@@ -40,8 +41,8 @@ h2 {
     color: #000000;
     font-size: 1.5em;
     font-weight: 500;
-    margin: 0 auto;
-    margin-left: 1.2em;
+    margin: 0em 0em 1em 1.1em;
+    
 }
 
 ul {
@@ -50,6 +51,7 @@ ul {
     margin: 0 auto;
     padding: 0;
     display: flex;
+    flex-direction: column;
 }
 
 .post {
@@ -58,9 +60,9 @@ ul {
     border: 2px solid #77878B;
     border-radius: 25px;
     background-color: #ffffff;
-    width: 80%;
+    width: 83%;
     padding: 1em;
-    margin: 1em;
+    margin: 0.5em 0em;
 }
 
 .search-title {
@@ -80,6 +82,7 @@ ul {
     height: 100px;
     border-radius: 16px;
     object-fit: cover;
+    margin: 0 auto;
 }
 
 
@@ -92,5 +95,9 @@ ul {
     }
     form {
         width: 660px;
+    }
+
+    .post {
+        width: 94%;
     }
 }
