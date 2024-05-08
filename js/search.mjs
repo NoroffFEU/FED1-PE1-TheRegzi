@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const tagsString = post.tags && post.tags.length > 0 ? post.tags.join(' ').toLowerCase() : '';
             postElement.setAttribute('data-tags', tagsString);
             postElement.innerHTML = `
-                <h3>${post.title}</h3>
+                <a class='search-title' href='/post/index.html?id=${post.id}'>${post.title}</a>
                 <img class='img' src="${post.media.url}" alt="Banner image for ${post.title}">
             `;
             resultsContainer.appendChild(postElement);
@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updatePostVisibility() {
+        const originalSearchValue = searchInput.value;
         const searchValue = searchInput.value.toLowerCase();
         const posts = document.querySelectorAll('.post');
         let visibleCount = 0; 
@@ -66,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         if (searchValue) {
-            searchInfo.textContent = `${searchValue} (${visibleCount})`;
+            searchInfo.textContent = `${originalSearchValue} (${visibleCount})`;
         } else {
             searchInfo.textContent = '';
         }
