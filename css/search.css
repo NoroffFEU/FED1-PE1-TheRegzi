@@ -34,6 +34,10 @@ h2 {
     
 }
 
+#search-info {
+    font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
 @media (min-width: 700px) {
     form {
         width: 660px;
