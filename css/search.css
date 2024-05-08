@@ -4,6 +4,7 @@ section {
     margin-bottom: 2em;
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 2em;
 }
 
 form {
@@ -32,7 +33,7 @@ h2 {
     font-family: 'Open sans', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
     font-weight: 600;
-    
+    margin-bottom: 0;
 }
 
 #search-info {
@@ -84,7 +85,6 @@ ul {
 }
 
 
-
 @media (min-width: 700px) {
 
     section {
@@ -100,15 +100,10 @@ ul {
     }
 
     h2 {
-        margin: 1em auto;
-        margin-left: 0em;
         font-size: 1.3em;
     }
     
     #search-info {
-        color: #000000;
         font-size: 1.7em;
-        font-weight: 500;
-        margin: 0em 0em 1em 0em;
     }
 }
