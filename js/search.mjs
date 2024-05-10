@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('search');
     const searchInfo = document.getElementById('search-info');
@@ -31,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return posts.data;
         } catch (error) {
             console.error('Failed to fetch posts:', error);
-        }
+        } 
     }
 
     function renderPosts(posts) {

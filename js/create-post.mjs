@@ -1,4 +1,3 @@
-
 async function createPost(formData) {
     const name = localStorage.getItem('name');
     const userToken = localStorage.getItem('userToken');

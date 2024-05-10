@@ -30,7 +30,6 @@ export async function fetchPosts() {
     }
 }
 
-
 function displayPosts(posts) {
     const postsContainer = document.getElementById('posts-container');
     postsContainer.innerHTML = '';

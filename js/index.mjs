@@ -1,6 +1,4 @@
-
 import { logoutUser } from "./logout.mjs";
-
 
 document.getElementById('hamburger-button').addEventListener('click', function() {
     var content = document.getElementById('hamburger-content');
@@ -12,8 +10,6 @@ document.getElementById('hamburger-button').addEventListener('click', function()
         content.classList.add('hidden');
     }
 });
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const createPostLink = document.querySelector('.createPostLink');
@@ -41,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
         registerLinkFooter.style.display = 'block';
     }
 });
-
 
 logoutUser();
 

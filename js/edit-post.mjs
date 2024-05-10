@@ -1,4 +1,3 @@
-
     const name = localStorage.getItem('name');
     const queryParams = new URLSearchParams(window.location.search);
     const postId = queryParams.get("id");

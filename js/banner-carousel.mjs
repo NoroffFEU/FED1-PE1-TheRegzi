@@ -1,10 +1,8 @@
 import { invisibleLoader, visibleLoader } from "./loader.mjs";
 
-
 var slideIndex = 1;
 const defaultName = 'Regine';
 const name = localStorage.getItem('name') || defaultName;
-
 
 async function fetchPosts() {
     visibleLoader();
@@ -26,7 +24,6 @@ async function fetchPosts() {
         invisibleLoader();
     }
 }
-
 
 function populateCarousel(postsArray) {
     const container = document.querySelector('.carousel-slides');

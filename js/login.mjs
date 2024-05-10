@@ -1,4 +1,3 @@
-
 function collectFormData() {
     return {
         email: document.getElementById('email').value,

@@ -1,4 +1,3 @@
-
 import { invisibleLoader, visibleLoader } from "./loader.mjs";
 
     const queryParams = new URLSearchParams(window.location.search);
