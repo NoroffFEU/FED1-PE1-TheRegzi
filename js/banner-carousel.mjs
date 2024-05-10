@@ -1,9 +1,13 @@
+import { invisibleLoader, visibleLoader } from "./loader.mjs";
+
+
 var slideIndex = 1;
 const defaultName = 'Regine';
 const name = localStorage.getItem('name') || defaultName;
 
 
 async function fetchPosts() {
+    visibleLoader();
     try {
         const response = await fetch(`https://v2.api.noroff.dev/blog/posts/${name}`); 
         if (!response.ok) {
@@ -18,8 +22,11 @@ async function fetchPosts() {
         showSlides(slideIndex);
     } catch (error) {
         console.error('Failed to fetch posts:', error);
+    } finally {
+        invisibleLoader();
     }
 }
+
 
 function populateCarousel(postsArray) {
     const container = document.querySelector('.carousel-slides');
