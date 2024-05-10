@@ -1,4 +1,6 @@
 
+import { invisibleLoader, visibleLoader } from "./loader.mjs";
+
     const queryParams = new URLSearchParams(window.location.search);
     const postId = queryParams.get("id");
 
@@ -31,6 +33,7 @@ async function fetchPostById(postId) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+    visibleLoader();
     try {
         const post = await fetchPostById(postId);
         if (post) {
@@ -40,7 +43,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     } catch (error) {
         console.error("An error occurred:", error);
-    } 
+    } finally {
+        invisibleLoader();
+    }
 });
 
 function displayBlogPost(post) {
