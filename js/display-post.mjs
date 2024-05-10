@@ -1,4 +1,4 @@
-
+import { invisibleLoader, visibleLoader } from "./loader.mjs";
 
 export async function fetchPosts() {
     const defaultName = 'Regine';
@@ -74,6 +74,7 @@ function filterPosts(posts, filter) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    visibleLoader();
     try {
         const posts = await fetchPosts();
         if (posts && posts.length > 0) {
@@ -93,5 +94,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     } catch (error) {
         console.error('Error loading posts:', error);
+    } finally {
+        invisibleLoader();
     }
 });
