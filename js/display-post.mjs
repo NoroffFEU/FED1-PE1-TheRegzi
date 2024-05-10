@@ -30,21 +30,10 @@ export async function fetchPosts() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        const posts = await fetchPosts();
-        if (posts && posts.length > 0) {
-            displayPosts(posts);
-        } else {
-            console.log('No posts available to display.');
-        }
-    } catch (error) {
-        console.error('Error loading posts:', error);
-    }
-});
 
 function displayPosts(posts) {
     const postsContainer = document.getElementById('posts-container');
+    postsContainer.innerHTML = '';
 
     posts.forEach(post => {
         const postElement = document.createElement('div');
@@ -66,3 +55,43 @@ function displayPosts(posts) {
     });
 }
 
+const tagMap = {
+    all: [],
+    ai: ['ai', 'artificial'], 
+    connectivity: ['connectivity', 'network', 'connected'],
+    tech: ['tech', 'technology', 'innovation']
+};
+
+function filterPosts(posts, filter) {
+    let filteredPosts = posts.filter(post => {
+        if (filter === 'all') {
+            return true;
+    }
+    const relevantTags = tagMap[filter];
+    return post.tags.some(tag => relevantTags.includes(tag.toLowerCase()));
+    });
+    displayPosts(filteredPosts);
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const posts = await fetchPosts();
+        if (posts && posts.length > 0) {
+            displayPosts(posts);
+
+            const buttons = document.querySelectorAll(".btn");
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    buttons.forEach(btn => btn.classList.remove("active"));
+                    button.classList.add("active");
+                    const filter = button.getAttribute("data-filter");
+                    filterPosts(posts, filter);
+                });
+            });
+        } else {
+            console.log('No posts available to display.');
+        }
+    } catch (error) {
+        console.error('Error loading posts:', error);
+    }
+});
