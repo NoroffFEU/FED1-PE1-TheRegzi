@@ -18,12 +18,19 @@ export async function loginUser(formData) {
             })
         });
 
-        if (!response.ok) {
-            const errorResponse = await response.json();
-            throw new Error(`HTTP error! status: ${response.status}, ${errorResponse.message}`);
-        }
-
         const data = await response.json();
+
+        if (!response.ok) {
+            if (response.status === 401) {
+                alert('Login failed: User not found or incorrect password');
+            } else if (data.errors && data.errors.length > 0) {
+                alert(`Login failed: ${data.errors.map(e => e.message).join(", ")}`);
+            } else {
+                alert('Login failed: An unexpected error occurred');
+            }
+            return; 
+        }
+        
         const userToken = data.data.accessToken;
         const name = data.data.name;
         localStorage.setItem('name', name);
@@ -39,7 +46,6 @@ export async function loginUser(formData) {
         window.location.href = '/index.html'; 
     } catch (error) {
         console.error('Error:', error);
-        alert('Failed to login: ' + error.message); 
     }
 }
 
