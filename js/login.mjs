@@ -24,7 +24,6 @@ export async function loginUser(formData) {
         }
 
         const data = await response.json();
-        console.log('Success:', data);
         const userToken = data.data.accessToken;
         const name = data.data.name;
         localStorage.setItem('name', name);
