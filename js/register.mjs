@@ -9,17 +9,6 @@ function collectFormData() {
 
 async function registerUser(formData) {
 
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@stud.noroff.no$/;
-    if (!emailRegex.test(formData.email)) {
-        alert('Error: Email must be a valid stud.noroff.no email');
-        return; 
-    }
-
-    if (formData.password !== formData.confirmPassword) {
-        alert('Error: Passwords do not match');
-        return;
-    }
-
     try {
         const response = await fetch('https://v2.api.noroff.dev/auth/register', {
             method: 'POST',
@@ -59,7 +48,7 @@ document.getElementById('registerForm').addEventListener('submit', async functio
     const formData = collectFormData();
     const password = document.getElementById('password').value;
     if (!validatePasswords(formData.password, formData.confirmPassword)) {
-        alert('Passwords do not match.');
+        alert('Error: Passwords do not match.');
         return;
     }
     if (password.length < 8) {
