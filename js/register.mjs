@@ -8,6 +8,18 @@ function collectFormData() {
 }
 
 async function registerUser(formData) {
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@stud.noroff.no$/;
+    if (!emailRegex.test(formData.email)) {
+        alert('Error: Email must be a valid stud.noroff.no email');
+        return; 
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+        alert('Error: Passwords do not match');
+        return;
+    }
+
     try {
         const response = await fetch('https://v2.api.noroff.dev/auth/register', {
             method: 'POST',
@@ -25,8 +37,6 @@ async function registerUser(formData) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const data = await response.json();
-        console.log('Success:', data);
         alert('Registration successful!');
         window.location.href = '/account/login.html'; 
     } catch (error) {
