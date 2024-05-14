@@ -1,4 +1,4 @@
-section {
+.search-div {
     display: flex;
     flex-direction: column;
     margin-bottom: 2em;
@@ -87,7 +87,7 @@ ul {
 
 @media (min-width: 700px) {
 
-    section {
+    .search-div {
         width: 660px;
         margin: 2.5em auto;
     }
