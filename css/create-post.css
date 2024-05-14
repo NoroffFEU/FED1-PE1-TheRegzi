@@ -1,4 +1,4 @@
-section {
+.edit-section {
     background-color: #ffffff;
     width: 95%;
     margin: 0 auto 2em;
@@ -58,7 +58,7 @@ button {
 }
 
 @media (min-width: 700px) {
-    section {
+    .edit-section {
         width: 700px;
     }
 
