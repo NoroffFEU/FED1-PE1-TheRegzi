@@ -243,14 +243,14 @@ h4 {
         padding: 3em;
     }
 
-    
-    
-    
     .carousel-item img {
         height: 300px;
         bottom: 100px;
     }
-    
+
+    .carousel {
+        margin-bottom: 3em;
+    }
     
 }
 
@@ -284,5 +284,6 @@ h4 {
 
     .carousel {
         height: 550px;
+        margin-bottom: 0;
     }
 }
