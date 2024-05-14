@@ -46,6 +46,10 @@ document.getElementById('blogPostForm').addEventListener('submit', function(even
 });
 
 async function fetchPostById(postId) {
+
+    const userToken = localStorage.getItem('userToken');
+    const apiUrl = `https://v2.api.noroff.dev/blog/posts/${name}/${postId}`;
+    
     try {
         const response = await fetch(apiUrl, {
             method: 'GET',
