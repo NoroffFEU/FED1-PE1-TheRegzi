@@ -31,8 +31,6 @@ async function editPost(formData) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const data = await response.json();
-        console.log('Success:', data);
         alert('Blog post is updated successfully!');
         window.location.href = '/index.html'; 
     } catch (error) {
