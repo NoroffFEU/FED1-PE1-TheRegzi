@@ -32,7 +32,7 @@ async function editPost(formData) {
         }
 
         alert('Blog post is updated successfully!');
-        window.location.href = '/index.html'; 
+        window.location.href = `/post/index.html?id=${postId}`; 
     } catch (error) {
         console.error('Error:', error);
         alert('Failed to update blog post: ' + error.message); 
