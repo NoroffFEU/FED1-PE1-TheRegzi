@@ -23,5 +23,7 @@ Mission: Provide the most accurate and up-to-date insights to tech leaders acros
 # Technologies Used
 
 HTML: For structuring the web pages.
+
 CSS: For styling the application and ensuring responsiveness.
+
 JavaScript: For fetching API data and adding interactive functionalities.
