@@ -27,3 +27,7 @@ HTML: For structuring the web pages.
 CSS: For styling the application and ensuring responsiveness.
 
 JavaScript: For fetching API data and adding interactive functionalities.
+
+# Website link:
+
+https://hotviewlabs.netlify.app/
