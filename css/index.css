@@ -117,7 +117,7 @@
     margin: 0 auto;
     padding: 0em 1.5em;
     text-align: left;
-    margin-top: -3px;
+    margin-top: -4px;
 }
 
 .carousel-caption p {
@@ -128,6 +128,10 @@
     margin: 0;
     font-family: 'Source sans 3', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.1em;
+}
+
+.carousel-caption h2 {
+    margin-bottom: 0.5em;
 }
 
 .carousel-control {
