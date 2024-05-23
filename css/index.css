@@ -266,8 +266,8 @@ h4 {
 
     .carousel-control {
         position: absolute;
-        top: 100px; 
-        bottom: 190px; 
+        top: 120px; 
+        bottom: 150px; 
         width: 200px;
         font-size: 7em;
         color: #000000;
