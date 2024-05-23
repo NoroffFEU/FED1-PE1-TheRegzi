@@ -12,7 +12,6 @@
     --body-text: 'Source sans 3', Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 .logo {
     width: 70px;
     padding: 0.5em 1.3em;
@@ -87,7 +86,6 @@ header {
     margin: 0em;
     padding: 2em 0em;
     z-index: 100;
-    
 }
 
 .fa-solid.fa-magnifying-glass {
@@ -99,7 +97,6 @@ footer {
     align-items: center;
     padding: 4em 1.5em;
 }
-
 
 .footer-link {
     color: var(--white);
@@ -188,7 +185,6 @@ footer p {
         display: none;
         padding: 0;
     }
-
 
     footer {
         display: flex;

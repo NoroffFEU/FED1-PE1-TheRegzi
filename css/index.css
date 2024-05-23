@@ -145,10 +145,8 @@
     justify-content: center; 
 }
 
-
 .carousel-control.prev {
     left: -30px;
-    
 }
 
 .carousel-control.next {
@@ -227,7 +225,6 @@ h4 {
         justify-content: center;
         gap: 1em;
     }
-    
 }
 
 @media (min-width: 800px) {
