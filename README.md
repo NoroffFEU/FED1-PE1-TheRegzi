@@ -8,6 +8,8 @@ My submission for the Front-End Developer studies Project Exam 1 at Noroff Vocat
 
 The goal of this website is to view dynamic blog posts display fetched from an API. There are also pages created for user registration, login, and blog post creation and management. The Admin is in charge of the blog post management. Another important aim was to create a responsive design to ensure optimal viewing on various devices.
 
+In addition to the mandatory pages needed for this project, a filter mechanism was added for the blog thumbnails on the home page, and a search page was also added. 
+
 ### Client Information
 
 Name: HotView Labs
