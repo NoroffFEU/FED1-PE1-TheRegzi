@@ -33,7 +33,7 @@ To get a local copy up and running follow this:
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/TheRegzi/Semester-Project-1.git
+   git clone https://github.com/NoroffFEU/FED1-PE1-TheRegzi.git
 
 ## Contributing
 
